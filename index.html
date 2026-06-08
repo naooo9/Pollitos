@@ -8,12 +8,20 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
+<div class="background-blur"></div>
+
 <div class="app">
+
+    <!-- SIDEBAR -->
 
     <aside class="sidebar">
 
@@ -23,55 +31,241 @@
 
         <nav>
 
-            <button class="active">
-                🏠 Inicio
+            <button onclick="showSection('home')" class="nav-btn active">
+                <i class="fa-solid fa-house"></i>
+                Inicio
             </button>
 
-            <button>
-                🎵 Canciones
+            <button onclick="showSection('songs')" class="nav-btn">
+                <i class="fa-solid fa-music"></i>
+                Canciones
             </button>
 
-            <button>
-                💌 Carta
+            <button onclick="showSection('letter')" class="nav-btn">
+                <i class="fa-solid fa-envelope"></i>
+                Carta
+            </button>
+
+            <button onclick="showSection('wrapped')" class="nav-btn">
+                <i class="fa-solid fa-star"></i>
+                Wrapped
+            </button>
+
+            <button onclick="showSection('timeline')" class="nav-btn">
+                <i class="fa-solid fa-heart"></i>
+                Timeline
             </button>
 
         </nav>
 
-        <div class="playlists">
+        <div class="playlist-box">
 
-            <h3>Playlists</h3>
+            <h3>Tus Playlists</h3>
 
-            <button>
-                ☁️ Me recuerdan a ti
-            </button>
+            <div class="playlist-item">
+                💖 Me recuerdan a ti
+            </div>
 
-            <button>
-                🌙 Noches juntos
-            </button>
+            <div class="playlist-item">
+                🌙 Noches contigo
+            </div>
 
-            <button>
-                💖 Nuestro amor
-            </button>
+            <div class="playlist-item">
+                ✨ Nuestro amor
+            </div>
 
         </div>
 
     </aside>
 
+    <!-- CONTENIDO -->
+
     <main>
 
-        <section class="hero">
+        <!-- HOME -->
 
-            <h1>
-                Nuestra Banda Sonora ❤️
-            </h1>
+        <section id="home" class="page active-page">
 
-            <p>
-                Cada canción guarda una historia.
-            </p>
+            <div class="hero">
+
+                <div class="hero-content">
+
+                    <h1>Nuestra Banda Sonora ❤️</h1>
+
+                    <p>
+                        Las palabras nunca alcanzan cuando lo que hay que decir desborda el alma.
+                    </p>
+
+                    <button
+                    class="hero-btn"
+                    onclick="showSection('songs')">
+
+                        🎵 Escuchar nuestra historia
+
+                    </button>
+
+                </div>
+
+            </div>
 
         </section>
 
-        <section id="songs" class="songs-grid">
+        <!-- CANCIONES -->
+
+        <section id="songs" class="page">
+
+            <h2 class="section-title">
+                Canciones para ti 💗
+            </h2>
+
+            <div id="songsContainer"
+            class="songs-grid">
+
+            </div>
+
+        </section>
+
+        <!-- CARTA -->
+
+        <section id="letter" class="page">
+
+            <div class="letter-card">
+
+                <h2>💌 Para Pollitop</h2>
+
+                <p>
+
+                    Esta página está hecha especialmente para dedicarte canciones lindas que me recuerdan a ti.
+
+                </p>
+
+                <p>
+
+                    Te amo mucho y quisiera que escuches cómo me haces sentir.
+
+                </p>
+
+                <p>
+
+                    Cada canción guarda un pedacito de lo que significas para mí.
+
+                </p>
+
+                <div class="signature">
+
+                    Con cariño,
+                    <br>
+                    Tu Pollitap ❤️
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- WRAPPED -->
+
+        <section id="wrapped" class="page">
+
+            <h2 class="section-title">
+                ✨ Nuestro Wrapped
+            </h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3>Días juntos</h3>
+
+                    <span id="daysCounter">
+                        ...
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Canciones dedicadas</h3>
+
+                    <span id="songCounter">
+                        0
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Playlist favorita</h3>
+
+                    <span>
+                        ❤️ Nuestro amor
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- TIMELINE -->
+
+        <section id="timeline" class="page">
+
+            <h2 class="section-title">
+                ❤️ Nuestra Historia
+            </h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>25/05/2025</h3>
+
+                        <p>
+                            El inicio de nuestra historia.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>🎵 Primera canción</h3>
+
+                        <p>
+                            La primera de muchas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="timeline-item">
+
+                    <div class="dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>💌 Hoy</h3>
+
+                        <p>
+                            Seguimos escribiendo nuestra historia.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -79,7 +273,9 @@
 
 </div>
 
-<div class="modal" id="memoryModal">
+<!-- MODAL -->
+
+<div id="memoryModal" class="modal">
 
     <div class="modal-content">
 
