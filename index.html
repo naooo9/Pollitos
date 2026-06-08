@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nuestra Música ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            ❤️ Nuestra Música
+        </div>
+
+        <nav>
+
+            <button class="active">
+                🏠 Inicio
+            </button>
+
+            <button>
+                🎵 Canciones
+            </button>
+
+            <button>
+                💌 Carta
+            </button>
+
+        </nav>
+
+        <div class="playlists">
+
+            <h3>Playlists</h3>
+
+            <button>
+                ☁️ Me recuerdan a ti
+            </button>
+
+            <button>
+                🌙 Noches juntos
+            </button>
+
+            <button>
+                💖 Nuestro amor
+            </button>
+
+        </div>
+
+    </aside>
+
+    <main>
+
+        <section class="hero">
+
+            <h1>
+                Nuestra Banda Sonora ❤️
+            </h1>
+
+            <p>
+                Cada canción guarda una historia.
+            </p>
+
+        </section>
+
+        <section id="songs" class="songs-grid">
+
+        </section>
+
+    </main>
+
+</div>
+
+<div class="modal" id="memoryModal">
+
+    <div class="modal-content">
+
+        <h2 id="memoryTitle"></h2>
+
+        <p id="memoryText"></p>
+
+        <button onclick="closeMemory()">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
